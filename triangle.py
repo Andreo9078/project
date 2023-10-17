@@ -65,6 +65,7 @@ class EquilateralTriangle(BaseTriangle):
         self._area = (self._side ** 2 * 3 ** 0.5) / 2
 
 
-tri = EquilateralTriangle()
-tri.side = 5
-print(tri.r_circumscribed_circle)
+if __name__ == "__main__":
+    tri = EquilateralTriangle()
+    tri.side = 5
+    print(tri.r_circumscribed_circle)

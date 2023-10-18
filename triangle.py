@@ -22,14 +22,14 @@ class EquilateralTriangle(BaseTriangle):
 
     @property
     def side(self):
-        return _side
+        return self._side
 
     @side.setter
     def side(self, a):
         self._side = a
         self._r_inscribed_circle = (a * 3**0.5) / 6
         self._r_circumscribed_circle = a / 3**0.5
-        self._area = (a**2 * 3**0.5)/2
+        self._area = (a**2 * 3**0.5)/4
 
     @property
     def r_inscribed_circle(self):
@@ -40,7 +40,7 @@ class EquilateralTriangle(BaseTriangle):
         self._side = (r * 6) / 3**0.5
         self._r_inscribed_circle = r
         self._r_circumscribed_circle = self._side / 3**0.5
-        self._area = (self._side**2 * 3**0.5)/2
+        self._area = (self._side**2 * 3**0.5)/4
 
     @property
     def r_circumscribed_circle(self):
@@ -51,7 +51,7 @@ class EquilateralTriangle(BaseTriangle):
         self._side = r * 3**0.5
         self._r_inscribed_circle = (self._side * 3**0.5) / 6
         self._r_circumscribed_circle = r
-        self._area = (self._side**2 * 3**0.5)/2
+        self._area = (self._side**2 * 3**0.5)/4
 
     @property
     def area(self):
@@ -62,7 +62,13 @@ class EquilateralTriangle(BaseTriangle):
         self._side = (4 * S / 3**0.5)**0.5
         self._r_inscribed_circle = (self._side * 3 ** 0.5) / 6
         self._r_circumscribed_circle = self._side / 3 ** 0.5
-        self._area = (self._side ** 2 * 3 ** 0.5) / 2
+        self._area = (self._side ** 2 * 3 ** 0.5) / 4
+
+    def __str__(self):
+        return f"side = {self.side}\n"\
+               f"r_inscribed_circle = {self.r_inscribed_circle}\n"\
+               f"r_circumscribed_circle = {self.r_circumscribed_circle}\n"\
+               f"area = {self.area}\n"
 
 
 if __name__ == "__main__":

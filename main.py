@@ -2,7 +2,7 @@ from triangle import EquilateralTriangle
 
 Triangle = EquilateralTriangle()
 
-first_choice = str(input('Введите параметр, по которому будут веститсь подсчеты: '))  
+first_choice = str(input('Введите параметр, по которому будут вестись подсчеты: '))  
 if (type(first_choice) == str):
     #while(first_choice.type() == str):
         if (first_choice == 'a'): 

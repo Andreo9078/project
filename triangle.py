@@ -59,7 +59,7 @@ class EquilateralTriangle(BaseTriangle):
 
     @area.setter
     def area(self, s):
-        self._side = (4 * S / 3**0.5)**0.5
+        self._side = (4 * s / 3**0.5)**0.5
         self._r_inscribed_circle = (self._side * 3 ** 0.5) / 6
         self._r_circumscribed_circle = self._side / 3 ** 0.5
         self._area = (self._side ** 2 * 3 ** 0.5) / 4

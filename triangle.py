@@ -5,13 +5,34 @@ class BaseTriangle:
     def r_inscribed_circle(self):
         pass
 
+    @r_inscribed_circle.setter
+    def r_inscribed_circle(self, r):
+        pass
+
     @property
     def r_circumscribed_circle(self):
+        pass
+
+    @r_circumscribed_circle.setter
+    def r_circumscribed_circle(self, r):
         pass
 
     @property
     def area(self):
         pass
+
+    @area.setter
+    def area(self, a):
+        pass
+
+    @property
+    def side(self):
+        pass
+
+    @side.setter
+    def side(self, s):
+        pass
+
 
 class EquilateralTriangle(BaseTriangle):
     def __init__(self):
